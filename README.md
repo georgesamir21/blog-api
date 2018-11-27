@@ -21,6 +21,14 @@ PUT `/feed/post/:id` to update/edit a post
 
 DELETE `/feed/post/:id` to delete a post
 
+GET `/users` to get all the users
+
+POST `/users` to add a user
+
+PUT `/users/:id` to update/edit a user
+
+DELETE `/users/:id` to delete a user
+
 
 ***NOTE: this repo is still unfinished yet***
 
