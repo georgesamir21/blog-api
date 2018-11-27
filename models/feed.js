@@ -2,7 +2,6 @@ const posts = [
   {title: 'post title 1'},
   {title: 'post title 2'}
 ];
-const feedsModel = {};
 
 exports.getPosts = () => {
   // hit db and get the posts...
@@ -18,7 +17,6 @@ exports.getPosts = () => {
 };
 
 exports.createPost = (postData) => {
-  console.log('I am here')
   // hit db and add the post...
   return new Promise((resolve, reject) => {
     if(postData) {
@@ -29,4 +27,14 @@ exports.createPost = (postData) => {
       reject('failed to add post!');
     }
   });
+};
+
+exports.putPost = (postId, postData) => {
+  // hit db and update the post...
+  return `should update post with id = ${postId}`;
+};
+
+exports.deletePost = (postId) => {
+  // hit db and delete the post...
+  return `should delete post with id = ${postId}`;
 };

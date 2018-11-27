@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+
 const feedRouter = require('./routes/feed');
+const usersRouter = require('./routes/users');
+
 const _PORT = 8080;
 const _HOST = 'localhost';
 const server = express();
@@ -16,6 +19,8 @@ server.use((req, res, next) => {
 });
 // Register your routes...
 server.use('/feed', feedRouter);
+server.use('/users', usersRouter);
+
 
 server.listen(_PORT, _HOST, () => {
   console.log(`Node Server is Listening on port ${_PORT}`);
